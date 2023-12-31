@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tts/flutter_tts.dart';
 
-Future<String> textToSpeech(
+Future textToSpeech(
   String currenWord,
   String language,
 ) async {
@@ -23,6 +23,4 @@ Future<String> textToSpeech(
 
   await flutterTts.setLanguage(language);
   await flutterTts.speak(currenWord);
-
-  return flutterTts.getLanguages as String;
 }

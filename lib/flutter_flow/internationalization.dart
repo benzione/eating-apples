@@ -131,24 +131,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // settings
   {
     'ajz37lko': {
-      'en': 'Setting',
+      'en': 'Settings',
       'he': 'הגדרות',
     },
-    'ax28dmrt': {
-      'en': 'English',
-      'he': 'אנגלית',
-    },
-    'wwl99e8j': {
-      'en': 'Hebrew',
-      'he': 'עברית',
-    },
     'w52ck8d2': {
-      'en': 'Number of trying:  ',
-      'he': 'מספר נסיונות',
-    },
-    'keq0qv9w': {
-      'en': '2',
-      'he': '2',
+      'en': 'Number of tries:  ',
+      'he': 'מספר נסיונות: ',
     },
     'fepudjje': {
       'en': '1',
@@ -182,13 +170,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Search for an item...',
       'he': 'מחפש אחר פריט...',
     },
+    'qbf4drdv': {
+      'en': 'Reset',
+      'he': 'אתחול',
+    },
+    'ax28dmrt': {
+      'en': 'English',
+      'he': 'אנגלית',
+    },
+    'wwl99e8j': {
+      'en': 'Hebrew',
+      'he': 'עברית',
+    },
     '5btc9a9n': {
-      'en': 'Add Word',
-      'he': 'להוסיף מילה',
+      'en': 'Add',
+      'he': 'להוסיף',
     },
     'tg7edp8m': {
       'en': 'Word to Add...',
-      'he': 'המילה שלהוסיף',
+      'he': 'המילה להוספה...',
     },
     'tiskxogz': {
       'en': 'English',

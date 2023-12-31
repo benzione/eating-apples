@@ -48,7 +48,7 @@ class FFAppState extends ChangeNotifier {
       _langauageApp = prefs.getString('ff_langauageApp') ?? _langauageApp;
     });
     _safeInit(() {
-      _languages = prefs.getString('ff_languages') ?? _languages;
+      _enHebFlag = prefs.getInt('ff_enHebFlag') ?? _enHebFlag;
     });
   }
 
@@ -179,7 +179,8 @@ class FFAppState extends ChangeNotifier {
     'N',
     'M',
     '',
-    ''
+    '',
+    ' '
   ];
   List<String> get letters => _letters;
   set letters(List<String> value) {
@@ -273,7 +274,8 @@ class FFAppState extends ChangeNotifier {
     'ה',
     'ב',
     'ס',
-    'ז'
+    'ז',
+    ' '
   ];
   List<String> get hebLetters => _hebLetters;
   set hebLetters(List<String> value) {
@@ -310,7 +312,7 @@ class FFAppState extends ChangeNotifier {
     prefs.setInt('ff_idxWord', value);
   }
 
-  int _upperLimit = 0;
+  int _upperLimit = 2;
   int get upperLimit => _upperLimit;
   set upperLimit(int value) {
     _upperLimit = value;
@@ -369,11 +371,11 @@ class FFAppState extends ChangeNotifier {
     prefs.setString('ff_langauageApp', value);
   }
 
-  String _languages = '';
-  String get languages => _languages;
-  set languages(String value) {
-    _languages = value;
-    prefs.setString('ff_languages', value);
+  int _enHebFlag = 1;
+  int get enHebFlag => _enHebFlag;
+  set enHebFlag(int value) {
+    _enHebFlag = value;
+    prefs.setInt('ff_enHebFlag', value);
   }
 }
 

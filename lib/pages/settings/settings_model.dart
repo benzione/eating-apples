@@ -7,11 +7,11 @@ class SettingsModel extends FlutterFlowModel<SettingsWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for Switch widget.
-  bool? switchValue;
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
+  // State field(s) for Switch widget.
+  bool? switchValue;
   // State field(s) for newWord widget.
   FocusNode? newWordFocusNode;
   TextEditingController? newWordController;

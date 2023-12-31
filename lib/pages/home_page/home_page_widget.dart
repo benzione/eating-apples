@@ -82,7 +82,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     context.watch<FFAppState>();
 
     return Title(
-        title: 'HomePage',
+        title: 'Home',
         color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
         child: Scaffold(
           key: scaffoldKey,
@@ -101,10 +101,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          width: MediaQuery.sizeOf(context).width *
-                              (FFAppConstants.propWidth * 3),
-                          height: MediaQuery.sizeOf(context).width *
-                              (FFAppConstants.propWidth * 5),
+                          width: functions.sizeOfWidget(
+                              MediaQuery.sizeOf(context).width,
+                              MediaQuery.sizeOf(context).height,
+                              MediaQuery.sizeOf(context).width,
+                              MediaQuery.sizeOf(context).height,
+                              FFAppConstants.propWidth * 3),
+                          height: functions.sizeOfWidget(
+                              MediaQuery.sizeOf(context).width,
+                              MediaQuery.sizeOf(context).height,
+                              MediaQuery.sizeOf(context).width,
+                              MediaQuery.sizeOf(context).height,
+                              FFAppConstants.propWidth * 6),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
@@ -138,8 +146,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               .displayLarge
                               .override(
                                 fontFamily: 'Outfit',
-                                fontSize: MediaQuery.sizeOf(context).width *
-                                    (FFAppConstants.propWidth * 1.3),
+                                fontSize: functions.sizeOfWidget(
+                                    MediaQuery.sizeOf(context).width,
+                                    MediaQuery.sizeOf(context).height,
+                                    MediaQuery.sizeOf(context).width,
+                                    MediaQuery.sizeOf(context).height,
+                                    FFAppConstants.propWidth * 1.3),
                               ),
                         ),
                       ],
@@ -207,16 +219,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[0]
-                              : FFAppState().hebLetters[0],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              0),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -248,16 +269,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[1]
-                              : FFAppState().hebLetters[1],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              1),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -289,16 +319,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[2]
-                              : FFAppState().hebLetters[2],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              2),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -330,16 +369,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[3]
-                              : FFAppState().hebLetters[3],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              3),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -371,16 +419,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[4]
-                              : FFAppState().hebLetters[4],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              4),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -412,16 +469,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[5]
-                              : FFAppState().hebLetters[5],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              5),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -453,16 +519,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[6]
-                              : FFAppState().hebLetters[6],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              6),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -494,16 +569,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[7]
-                              : FFAppState().hebLetters[7],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              7),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -523,88 +607,108 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await action_blocks.pressLetterProcess(
-                              context,
-                              letterIdx: 8,
-                              tempLetters:
-                                  FFLocalizations.of(context).languageCode ==
-                                          'en'
-                                      ? FFAppState().letters
-                                      : FFAppState().hebLetters,
-                            );
-                          },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[8]
-                              : FFAppState().hebLetters[8],
-                          options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                        if (FFAppState().langauageApp == 'en')
+                          FFButtonWidget(
+                            onPressed: () async {
+                              await action_blocks.pressLetterProcess(
+                                context,
+                                letterIdx: 8,
+                                tempLetters:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? FFAppState().letters
+                                        : FFAppState().hebLetters,
+                              );
+                            },
+                            text: functions.presentCharOnButton(
+                                FFAppState().langauageApp,
+                                FFAppState().letters.toList(),
+                                FFAppState().hebLetters.toList(),
+                                8),
+                            options: FFButtonOptions(
+                              width: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              height: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              padding: const EdgeInsets.all(0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
-                            borderRadius: BorderRadius.circular(10.0),
                           ),
-                        ),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await action_blocks.pressLetterProcess(
-                              context,
-                              letterIdx: 9,
-                              tempLetters:
-                                  FFLocalizations.of(context).languageCode ==
-                                          'en'
-                                      ? FFAppState().letters
-                                      : FFAppState().hebLetters,
-                            );
-                          },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[9]
-                              : FFAppState().hebLetters[9],
-                          options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                        if (FFAppState().langauageApp == 'en')
+                          FFButtonWidget(
+                            onPressed: () async {
+                              await action_blocks.pressLetterProcess(
+                                context,
+                                letterIdx: 9,
+                                tempLetters:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? FFAppState().letters
+                                        : FFAppState().hebLetters,
+                              );
+                            },
+                            text: functions.presentCharOnButton(
+                                FFAppState().langauageApp,
+                                FFAppState().letters.toList(),
+                                FFAppState().hebLetters.toList(),
+                                9),
+                            options: FFButtonOptions(
+                              width: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              height: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              padding: const EdgeInsets.all(0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
-                            borderRadius: BorderRadius.circular(10.0),
                           ),
-                        ),
                       ],
                     ),
                   ),
@@ -627,16 +731,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[10]
-                              : FFAppState().hebLetters[10],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              10),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -668,16 +781,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[11]
-                              : FFAppState().hebLetters[11],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              11),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -709,16 +831,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[12]
-                              : FFAppState().hebLetters[12],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              12),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -750,16 +881,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[13]
-                              : FFAppState().hebLetters[13],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              13),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -791,16 +931,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[14]
-                              : FFAppState().hebLetters[14],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              14),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -832,16 +981,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[15]
-                              : FFAppState().hebLetters[15],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              15),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -873,16 +1031,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[16]
-                              : FFAppState().hebLetters[16],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              16),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -914,16 +1081,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[17]
-                              : FFAppState().hebLetters[17],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              17),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -955,16 +1131,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[18]
-                              : FFAppState().hebLetters[18],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              18),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -984,47 +1169,57 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await action_blocks.pressLetterProcess(
-                              context,
-                              letterIdx: 19,
-                              tempLetters:
-                                  FFLocalizations.of(context).languageCode ==
-                                          'en'
-                                      ? FFAppState().letters
-                                      : FFAppState().hebLetters,
-                            );
-                          },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[19]
-                              : FFAppState().hebLetters[19],
-                          options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                        if (FFAppState().langauageApp == 'he')
+                          FFButtonWidget(
+                            onPressed: () async {
+                              await action_blocks.pressLetterProcess(
+                                context,
+                                letterIdx: 19,
+                                tempLetters:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? FFAppState().letters
+                                        : FFAppState().hebLetters,
+                              );
+                            },
+                            text: functions.presentCharOnButton(
+                                FFAppState().langauageApp,
+                                FFAppState().letters.toList(),
+                                FFAppState().hebLetters.toList(),
+                                19),
+                            options: FFButtonOptions(
+                              width: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              height: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              padding: const EdgeInsets.all(0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
-                            borderRadius: BorderRadius.circular(10.0),
                           ),
-                        ),
                       ],
                     ),
                   ),
@@ -1047,16 +1242,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[20]
-                              : FFAppState().hebLetters[20],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              20),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1088,16 +1292,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[21]
-                              : FFAppState().hebLetters[21],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              21),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1129,16 +1342,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[22]
-                              : FFAppState().hebLetters[22],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              22),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1170,16 +1392,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[23]
-                              : FFAppState().hebLetters[23],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              23),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1211,16 +1442,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[24]
-                              : FFAppState().hebLetters[24],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              24),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1252,16 +1492,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[25]
-                              : FFAppState().hebLetters[25],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              25),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1293,16 +1542,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       : FFAppState().hebLetters,
                             );
                           },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[26]
-                              : FFAppState().hebLetters[26],
+                          text: functions.presentCharOnButton(
+                              FFAppState().langauageApp,
+                              FFAppState().letters.toList(),
+                              FFAppState().hebLetters.toList(),
+                              26),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1322,88 +1580,108 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await action_blocks.pressLetterProcess(
-                              context,
-                              letterIdx: 27,
-                              tempLetters:
-                                  FFLocalizations.of(context).languageCode ==
-                                          'en'
-                                      ? FFAppState().letters
-                                      : FFAppState().hebLetters,
-                            );
-                          },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[27]
-                              : FFAppState().hebLetters[27],
-                          options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                        if (FFAppState().langauageApp == 'he')
+                          FFButtonWidget(
+                            onPressed: () async {
+                              await action_blocks.pressLetterProcess(
+                                context,
+                                letterIdx: 27,
+                                tempLetters:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? FFAppState().letters
+                                        : FFAppState().hebLetters,
+                              );
+                            },
+                            text: functions.presentCharOnButton(
+                                FFAppState().langauageApp,
+                                FFAppState().letters.toList(),
+                                FFAppState().hebLetters.toList(),
+                                27),
+                            options: FFButtonOptions(
+                              width: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              height: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              padding: const EdgeInsets.all(0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
-                            borderRadius: BorderRadius.circular(10.0),
                           ),
-                        ),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await action_blocks.pressLetterProcess(
-                              context,
-                              letterIdx: 28,
-                              tempLetters:
-                                  FFLocalizations.of(context).languageCode ==
-                                          'en'
-                                      ? FFAppState().letters
-                                      : FFAppState().hebLetters,
-                            );
-                          },
-                          text: FFLocalizations.of(context).languageCode == 'en'
-                              ? FFAppState().letters[28]
-                              : FFAppState().hebLetters[28],
-                          options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                        if (FFAppState().langauageApp == 'he')
+                          FFButtonWidget(
+                            onPressed: () async {
+                              await action_blocks.pressLetterProcess(
+                                context,
+                                letterIdx: 28,
+                                tempLetters:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? FFAppState().letters
+                                        : FFAppState().hebLetters,
+                              );
+                            },
+                            text: functions.presentCharOnButton(
+                                FFAppState().langauageApp,
+                                FFAppState().letters.toList(),
+                                FFAppState().hebLetters.toList(),
+                                28),
+                            options: FFButtonOptions(
+                              width: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              height: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              padding: const EdgeInsets.all(0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
-                            borderRadius: BorderRadius.circular(10.0),
                           ),
-                        ),
                       ],
                     ),
                   ),
@@ -1415,7 +1693,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
                               context.pushNamed(
@@ -1434,25 +1712,29 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             icon: const Icon(
                               Icons.settings_sharp,
+                              color: Colors.white,
                               size: 15.0,
                             ),
                             options: FFButtonOptions(
-                              width: MediaQuery.sizeOf(context).width *
-                                  FFAppConstants.propWidth,
-                              height: MediaQuery.sizeOf(context).width *
-                                  FFAppConstants.propWidth,
+                              width: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
+                              height: functions.sizeOfWidget(
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  MediaQuery.sizeOf(context).width,
+                                  MediaQuery.sizeOf(context).height,
+                                  FFAppConstants.propWidth),
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).secondary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                  ),
+                              textStyle:
+                                  FlutterFlowTheme.of(context).displaySmall,
                               elevation: 3.0,
                               borderSide: const BorderSide(
                                 color: Colors.transparent,
@@ -1463,8 +1745,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            await action_blocks.pressLetterProcess(
+                              context,
+                              letterIdx: 29,
+                              tempLetters:
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? FFAppState().letters
+                                      : FFAppState().hebLetters,
+                            );
                           },
                           text: FFLocalizations.of(context).getText(
                             'e1w1agk0' /* Space */,
@@ -1474,11 +1764,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             size: 15.0,
                           ),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width * 0.3,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth * 6),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
@@ -1498,35 +1796,37 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                         FFButtonWidget(
                           onPressed: () async {
-                            _model.languagesTemp = await actions.textToSpeech(
+                            await actions.textToSpeech(
                               FFAppState().CurrentWord,
                               FFAppState().langauageApp,
                             );
-
-                            setState(() {});
                           },
                           text: '',
                           icon: const Icon(
                             Icons.transcribe_outlined,
+                            color: Colors.white,
                             size: 15.0,
                           ),
                           options: FFButtonOptions(
-                            width: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
-                            height: MediaQuery.sizeOf(context).width *
-                                FFAppConstants.propWidth,
+                            width: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
+                            height: functions.sizeOfWidget(
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                MediaQuery.sizeOf(context).width,
+                                MediaQuery.sizeOf(context).height,
+                                FFAppConstants.propWidth),
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  fontSize: 20.0,
-                                ),
+                            textStyle:
+                                FlutterFlowTheme.of(context).displaySmall,
                             elevation: 3.0,
                             borderSide: const BorderSide(
                               color: Colors.transparent,
